@@ -1,0 +1,1 @@
+web: gunicorn bs5portfolio.wsgi --log-file
