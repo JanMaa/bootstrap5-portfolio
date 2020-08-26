@@ -1,1 +1,1 @@
-web: gunicorn bs5portfolio.wsgi --log-file
+web: gunicorn bs5portfolio.wsgi --log-file -
