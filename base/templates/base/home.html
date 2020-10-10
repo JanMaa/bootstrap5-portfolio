@@ -8,18 +8,37 @@
     <meta name="description" content="Janric Malate Portfolio">
     <meta name="author" content="Janric Malate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
   </head>
   <body>
     <div class="background"></div>
     <div class="intro-left">
-      <div class="container-fluid full-height">
-        <div class="row text-center align-items-center full-height">
-          <div class="col">
+      <div class="container-fluid full-height" id="intro-container">
+        <div class="row text-center">
+          <div class="col-12 mb-2">
             <img src="{% static 'img/avatar.jpg' %}" alt="User avatar" class="avatar" />
-            <p class="display-6">Janric Malate</p>
-            <p>Web and Mobile Apps Development</p>
+          </div>
+          <div class="col-12 mb-5">
+            <h1 class="display-5 mb-2">Janric Malate</h1>
+            <p class="lead">Web and Mobile App Development</p>
+          </div>
+          <div class="col-12">
+            <ul class="social-links">
+              <li class="mr-3"><a href="https://www.facebook.com/zh4nzz" target="_blank" role="button"><i class="fab fa-facebook text-white"></i></a></li>
+              <li class="mx-3"><a href="https://www.linkedin.com/in/janric-malate-26a256116" target="_blank" role="button"><i class="fab fa-linkedin text-white"></i></a></li>
+              <li class="mx-3"><a href="https://www.twitter.com/janricmalate" target="_blank" role="button"><i class="fab fa-twitter text-white"></i></a></li>
+              <li class="mx-3"><a href="https://www.instagram.com/janricmalate" target="_blank" role="button"><i class="fab fa-instagram text-white"></i></a></li>
+              <li class="ml-3"><a href="https://github.com/JanMaa" target="_blank" role="button"><i class="fab fa-github text-white"></i></a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -28,141 +47,118 @@
       <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-8 panel-right px-0">
-          <section class="quote">
+          <section class="quote grey lighten-4 rounded">
             <figure>
               <blockquote class="blockquote">
                 <p>
-                  “God is in the details.”
+                  “If you do what you’ve always done, you’ll get what you’ve always gotten.”
                 </p>
+                <figcaption class="blockquote-footer">Anthony Robbins</figcaption>
               </blockquote>
-              <figcaption class="blockquote-footer">
-                Mies van der Rohe <cite title="Source Title">1960</cite>
-              </figcaption>
             </figure>
           </section>
 
           <section class="intro">
-            <h1 class="display-4">Beautiful & Neat Portfolio Page</h1>
-            <h2 class="display-6 mb-5">Built with Bootstrap 5</h2>
-
-            <p>
-              The longer I live, the more beautiful life becomes. If you
-              foolishly ignore beauty, you will soon find yourself without it.
-              Your life will be impoverished. But if you invest in beauty, it
-              will remain with you all the days of your life.
-            </p>
+            <h1 class="display-4">SKILLS</h1>
+            <h4 class="display-6 mb-5">MVC, Django, Django REST Framework, Bootstrap, Material Design Bootstrap, jQuery, Git, AWS RDS PostgreSQL, AWS S3 Bucket</h4>
+              <figure class="grey lighten-4 rounded">
+                <blockquote class="blockquote">
+                  <p class="lead">
+                    I taught my self different programming languages, develop and code as a hobby, but my dream is to land a career in IT industry particularly in Web Development. I  mostly spend my free time googling for new trends in technology and modern approaches in design and development. I like building things and challenging my self on solving problems  to enhance my robust problem-solving skills and proven experience in creating my own web apps or projects. I always look forward to be part of a team or company which creates and design software in a test-driven environment  and aims to develop modern technologies that make people's life better. 
+                  </p>
+                </blockquote>
+              </figure>
           </section>
 
           <section class="projects">
-            <h2 class="display-6 mb-5">My projects:</h2>
+            <h2 class="display-6 mb-5">My project:</h2>
+            <h2 class="display-6 mb-4 text-center">To Do Now</h2>
             <div class="container-fluid">
               <div class="row gy-5">
-                <div class="col-md-6">
-                  <img
-                    src="{% static 'img/g1.jpg' %}"
-                    alt="Portfolio image"
-                    class="img-fluid thumbnail"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <img
-                    src="{% static 'img/g2.jpg' %}"
-                    alt="Portfolio image"
-                    class="img-fluid thumbnail"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <img
-                    src="{% static 'img/g3.jpg' %}"
-                    alt="Portfolio image"
-                    class="img-fluid thumbnail"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <img
-                    src="{% static 'img/g4.jpg' %}"
-                    alt="Portfolio image"
-                    class="img-fluid thumbnail"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <img
-                    src="{% static 'img/g5.jpg' %}"
-                    alt="Portfolio image"
-                    class="img-fluid thumbnail"
-                  />
-                </div>
-                <div class="col-md-6">
-                  <img
-                    src="{% static 'img/g6.jpg' %}"
-                    alt="Portfolio image"
-                    class="img-fluid thumbnail"
-                  />
+                <div class="col-md-12">
+                  <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="d-block w-100" src="{% static 'img/1.png' %}"
+                          alt="First slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/2.png' %}"
+                          alt="Second slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/3.png' %}"
+                          alt="Third slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/4.png' %}"
+                          alt="Fourth slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/5.png' %}"
+                          alt="Fifth slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/6.png' %}"
+                          alt="Sixth slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/7.png' %}"
+                          alt="Seventh slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/8.png' %}"
+                          alt="Eigth slide">
+                      </div>
+                      <div class="carousel-item">
+                        <img class="d-block w-100" src="{% static 'img/9.png' %}"
+                          alt="Ninth slide">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon unique-color-dark rounded-circle" aria-hidden="true" style="color: white!important;"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon unique-color-dark rounded-circle" aria-hidden="true" style="color: white!important;"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <a href="#" class="float-right mt-3 px-3">See more ></a>
+            <a href="https://jm-todonow.herokuapp.com" class="float-right mt-3 px-3" target="_blank"><span class="lead">See more</span></a>
           </section>
 
           <section class="blog">
-            <h2 class="display-6 mb-5">My blog:</h2>
+            <h2 class="display-6 mb-5">Project link:</h2>
             <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-4">
+              <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
                   <div class="card mb-4">
-                    <img src="{% static 'img/b1.jpg' %}" class="card-img-top" alt="..." />
+                    <img src="{% static 'img/9.png' %}" class="card-img-top" alt="..." />
                     <div class="card-body">
-                      <h5 class="card-title">Which tools I use for design</h5>
+                      <h5 class="card-title">To Do Now</h5>
                       <p class="card-text">
-                        Lorem ipsum dolor sit amet...
+                        Made with HTML/CSS, JavaScript, Django, Django REST Framework, MDBoostrap, jQuery, AWS RDS PostgreSQL, AWS S3 Bucket
+                        <ul class="card-text">
+                          <li>Modern User Friendly Interface</li>
+                          <li>RESTful UI components</li>
+                          <li>Fully responsive from any screen sizes</li>
+                          <li>Smooth user navigation experience</li>
+                          <li>Customizable user profile</li>
+                        <ul>
                       </p>
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary float-right"
-                      >
-                        Read more...
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card mb-4">
-                    <img src="{% static 'img/b2.jpg' %}" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                      <h5 class="card-title">Why light design matters?</h5>
-                      <p class="card-text">
-                        Lorem ipsum dolor sit amet...
-                      </p>
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary float-right"
-                      >
-                        Read more...
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="card">
-                    <img src="{% static 'img/b3.jpg' %}" class="card-img-top" alt="..." />
-                    <div class="card-body">
-                      <h5 class="card-title">TOP 10 design ideas in 2021</h5>
-                      <p class="card-text">
-                        Lorem ipsum dolor sit amet...
-                      </p>
-                      <button
-                        type="button"
-                        class="btn btn-outline-secondary float-right"
-                      >
-                        Read more...
-                      </button>
+                      
+                      <a href="https://jm-todonow.herokuapp.com" target="_blank" role="button"class="btn btn-outline-unique float-right">
+                        Visit now
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <a href="#" class="float-right mt-3 px-3">Read more ></a>
           </section>
 
           <section class="contact">
@@ -195,7 +191,7 @@
               </div>
             </div>
             <div class="col-md-12">
-              <div class="mb-3 mx-3">
+              <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" id="message" rows="3"></textarea>
               </div>
@@ -204,17 +200,21 @@
               Send
             </button>
           </section>
-
-          <footer class="footer">
+          <footer class="footer py-3">
             <div class="container-fluid text-center">
-              <span class="text-muted">
-                Made with &hearts; by 
-                <a href="https://mdbootstrap.com">Beshycorn</a></span
-              >
+                <i class="fas fa-envelope"></i><span class="text-muted ml-2">janricmalate@gmail.com</span>
             </div>
           </footer>
         </div>
       </div>
     </div>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
   </body>
 </html>
