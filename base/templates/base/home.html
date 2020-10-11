@@ -63,7 +63,7 @@
             <h4 class="display-6 mb-5">MVC, Django, Django REST Framework, Bootstrap, Material Design Bootstrap, jQuery, Git, AWS RDS PostgreSQL, AWS S3 Bucket</h4>
               <figure class="grey lighten-4 rounded">
                 <blockquote class="blockquote">
-                  <p class="lead">
+                  <p class="lead" id="bio">
                     I taught my self different programming languages, develop and code as a hobby, but my dream is to land a career in IT industry particularly in Web Development. I  mostly spend my free time googling for new trends in technology and modern approaches in design and development. I like building things and challenging my self on solving problems  to enhance my robust problem-solving skills and proven experience in creating my own web apps or projects. I always look forward to be part of a team or company which creates and design software in a test-driven environment  and aims to develop modern technologies that make people's life better. 
                   </p>
                 </blockquote>
@@ -127,8 +127,9 @@
                 </div>
               </div>
             </div>
-
-            <a href="https://jm-todonow.herokuapp.com" class="float-right mt-3 px-3" target="_blank"><span class="lead">See more</span></a>
+            <div class="mt-3 text-center">
+              <a href="https://github.com/JanMaa" target="_blank" id="source-link"><i class="fab fa-github"></i><span class="lead ml-2">Source code</span></a>
+            </div>
           </section>
 
           <section class="blog">
@@ -163,43 +164,74 @@
 
           <section class="contact">
             <h2 class="display-6 mb-5">Contact me:</h2>
-
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Name:</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      placeholder="John..."
-                    />
+            <form id="form">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="name" class="form-label lead">Name:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter your name"
+                      />
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email address</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      placeholder="name@example.com"
-                    />
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="email" class="form-label lead">Email address:</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter your email"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-12">
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label for="message" class="form-label lead">Message:</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Type your message"></textarea>
+                </div>
               </div>
-            </div>
-            <button type="button" class="btn btn-outline-dark float-right mr-3">
-              Send
-            </button>
+              <button type="submit" class="btn btn-outline-default float-right mr-3">
+                Send
+              </button>
+            </form>
           </section>
+
+          <!-- Central Modal Medium Success -->
+           <div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+             <div class="modal-dialog modal-notify modal-success" role="document">
+               <!--Content-->
+               <div class="modal-content">
+                 <!--Header-->
+                 <div class="modal-header">
+                   <p class="heading lead">Message Sent</p>
+
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true" class="white-text">&times;</span>
+                   </button>
+                 </div>
+
+                 <!--Body-->
+                 <div class="modal-body">
+                   <div class="text-center">
+                     <i class="fas fa-check animated rotateIn"></i>
+                     <span class="lead ml-2">Message sent successfully!</span>
+                     <p class="lead">Thank you for your message <span id="sender" class="text-success"></span>. I'll reach out to you as soon as posssible through <span id="sender-email" class="text-success"></span>.</p>
+                   </div>
+                 </div>
+               <!--/.Content-->
+             </div>
+           </div>
+          </div>
+           <!-- Central Modal Medium Success-->
+
           <footer class="footer py-3">
             <div class="container-fluid text-center">
                 <i class="fas fa-envelope"></i><span class="text-muted ml-2">janricmalate@gmail.com</span>
@@ -208,6 +240,7 @@
         </div>
       </div>
     </div>
+
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -216,5 +249,54 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+    <script type="text/javascript">
+
+      function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i].trim();
+              // Does this cookie string begin with the name we want?
+              if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+      }
+      return cookieValue;
+    }
+      var csrftoken = getCookie('csrftoken');
+
+      var form = document.getElementById('form')
+      form.addEventListener('submit', function(e){
+        e.preventDefault()
+
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var sender = document.getElementById('sender');
+        var sender_email = document.getElementById('sender-email');
+
+        var url = 'send-message/'
+
+        fetch(url, {
+          method:'POST',
+          headers:{
+            'Content-type':'application/json',
+            'X-CSRFToken':csrftoken,
+          },
+          body:JSON.stringify({'name':name, 'email':email, 'message':message})
+        }).then(function(data){
+          sender.innerHTML = name;
+          sender_email.innerHTML = email;
+          $('#centralModalSuccess').modal('show');
+          $('#form').trigger("reset");
+        })
+        })
+
+    </script>
+
   </body>
 </html>

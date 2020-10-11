@@ -40,7 +40,14 @@ body {
   color: #2BBBAD!important;
 }
 
+#bio {
+  text-align: justify;
+  text-justify: inter-word;
+}
 
+#source-link:hover {
+  text-decoration: underline!important;
+}
 
 .social-links {
     padding: 0;
@@ -95,5 +102,9 @@ a {
     position: relative;
     width: 100%;
   }
+
+  #bio {
+  text-align: left;
+}
 
 }
